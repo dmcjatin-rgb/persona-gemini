@@ -298,7 +298,7 @@ function Quiz({setPage}){
 // ═══════════════════════════════════════════════════════════════════
 // CHAT — with real Suno song card
 // ═══════════════════════════════════════════════════════════════════
-const API_URL = "http://localhost:4000";
+const API_URL = "https://persona-gemini-zg4i.onrender.com";
 
 // ── Poll song status until ready ──────────────────────────────────
 async function pollSongStatus(taskId, msgIndex, setMessages) {
