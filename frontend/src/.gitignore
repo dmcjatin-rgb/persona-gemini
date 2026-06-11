@@ -7,5 +7,5 @@ backend/.env
 backend/suno-api/.env
 backend/suno-api/.env.local
 frontend/.env
-dist/
+dist/       
 build/
