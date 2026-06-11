@@ -6,4 +6,6 @@ frontend/node_modules
 backend/.env
 backend/suno-api/.env
 backend/suno-api/.env.local
-frontend/.env   
+frontend/.env
+dist/
+build/
