@@ -412,7 +412,7 @@ function Chat({setPage}){
         <div style={{flex:1,overflowY:"auto",padding:"1.5rem",display:"flex",flexDirection:"column",gap:"1rem"}}>
           <div style={{textAlign:"center",margin:"0.5rem 0"}}>
             <span style={{background:"rgba(124,92,252,0.1)",border:"1px solid rgba(124,92,252,0.2)",borderRadius:100,padding:"0.25rem 1rem",fontSize:"0.75rem",color:"var(--violet2)"}}>
-              🎤 Real human voice songs • Say "ek sad hindi song bana do"
+              🎤 Real human voice songs 
             </span>
           </div>
 
@@ -469,7 +469,7 @@ function Chat({setPage}){
           <div style={{display:"flex",gap:"0.5rem",alignItems:"center"}}>
             <button onClick={()=>fileInputRef.current?.click()} style={{width:40,height:40,borderRadius:"50%",flexShrink:0,background:fileLoading?"rgba(124,92,252,0.2)":"var(--surface)",border:"1px solid var(--border2)",cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"center",fontSize:"1.1rem"}} onMouseEnter={e=>e.currentTarget.style.background="rgba(124,92,252,0.15)"} onMouseLeave={e=>e.currentTarget.style.background=fileLoading?"rgba(124,92,252,0.2)":"var(--surface)"}>{fileLoading?"⏳":"📎"}</button>
             <div style={{flex:1}}>
-              <input ref={inputRef} value={input} onChange={e=>setInput(e.target.value)} onKeyDown={e=>{if(e.key==="Enter")send();}} placeholder={uploadedFile?`Ask about ${uploadedFile.name}…`:`Message ${activePersona.name} — ya "ek gaana bana do" 🎵`} style={{width:"100%",background:"var(--surface)",border:"1px solid var(--border2)",borderRadius:100,padding:"0.75rem 1.25rem",color:"var(--text)",fontFamily:"var(--font-body)",fontSize:"0.9375rem",outline:"none",boxSizing:"border-box"}}/>
+              <input ref={inputRef} value={input} onChange={e=>setInput(e.target.value)} onKeyDown={e=>{if(e.key==="Enter")send();}} placeholder={uploadedFile?`Ask about ${uploadedFile.name}…`:`Message ${activePersona.name}`} style={{width:"100%",background:"var(--surface)",border:"1px solid var(--border2)",borderRadius:100,padding:"0.75rem 1.25rem",color:"var(--text)",fontFamily:"var(--font-body)",fontSize:"0.9375rem",outline:"none",boxSizing:"border-box"}}/>
             </div>
             <button onClick={send} style={{width:44,height:44,borderRadius:"50%",background:(input.trim()||uploadedFile)?"var(--violet)":"var(--surface)",border:"1px solid var(--border2)",cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"center",fontSize:"1.1rem",flexShrink:0,transition:"all 0.15s"}} onMouseEnter={e=>e.currentTarget.style.background="#8a6dfd"} onMouseLeave={e=>e.currentTarget.style.background=(input.trim()||uploadedFile)?"var(--violet)":"var(--surface)"}>↑</button>
           </div>
